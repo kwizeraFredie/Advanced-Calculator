@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <form action="CalcServlet" method="post" id="calcForm">
+      <input type="text" name="expression" id="expression" readonly placeholder="0">
+      
+      <div class="buttons">
+        <button type="button" onclick="appendVal('7')">7</button>
+        <button type="button" onclick="appendVal('8')">8</button>
+        <button type="button" onclick="appendVal('9')">9</button>
+        <button type="button" onclick="appendVal('/')">÷</button>
+
+        <button type="button" onclick="appendVal('4')">4</button>
+        <button type="button" onclick="appendVal('5')">5</button>
+        <button type="button" onclick="appendVal('6')">6</button>
+        <button type="button" onclick="appendVal('*')">×</button>
+
+        <button type="button" onclick="appendVal('1')">1</button>
+        <button type="button" onclick="appendVal('2')">2</button>
+        <button type="button" onclick="appendVal('3')">3</button>
+        <button type="button" onclick="appendVal('-')">−</button>
+
+        <button type="button" onclick="appendVal('0')">0</button>
+        <button type="button" onclick="appendVal('.')">.</button>
+        <button type="button" onclick="appendVal('+')">+</button>
+        <button type="button" onclick="clearExp()">C</button>
+
+        <button type="button" onclick="appendVal('sin ')">sin</button>
+        <button type="button" onclick="appendVal('cos ')">cos</button>
+        <button type="button" onclick="appendVal('sqrt ')">√</button>
+        <button type="button" onclick="appendVal('^')">^</button>
+
+        <button type="submit" class="equal">=</button>
+      </div>
+    </form>
+
+    <div class="result">
+      <h3>Result:</h3>
+      <p>
+        <!-- Servlet prints result here -->
+        ${result}
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function appendVal(val) {
+      document.getElementById("expression").value += val;
+    }
+    function clearExp() {
+      document.getElementById("expression").value = "";
+    }
+  </script>
+</body>
+</html>
