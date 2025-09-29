@@ -1,0 +1,94 @@
+/* General Background */
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Calculator Card */
+.calculator {
+  background: rgba(20, 20, 40, 0.95);
+  border-radius: 20px;
+  border: 2px solid #444;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+}
+
+.text-glow {
+  color: #00f2fe;
+  text-shadow: 0 0 10px #00f2fe, 0 0 20px #00f2fe;
+}
+
+/* Display */
+#display {
+  height: 70px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #00f2fe;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00f2fe;
+}
+
+/* Grid Layout */
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Buttons */
+.calc-grid button {
+  padding: 18px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 12px;
+  border: none;
+  transition: 0.2s;
+}
+
+.btn-number {
+  background: #111;
+  color: #0ff;
+  box-shadow: 0 0 10px #0ff;
+}
+.btn-number:hover {
+  background: #0ff;
+  color: #111;
+}
+
+.btn-operator {
+  background: #222;
+  color: #ff4081;
+  box-shadow: 0 0 10px #ff4081;
+}
+.btn-operator:hover {
+  background: #ff4081;
+  color: #111;
+}
+
+.btn-func {
+  background: #333;
+  color: #ffa500;
+  box-shadow: 0 0 10px #ffa500;
+}
+.btn-func:hover {
+  background: #ffa500;
+  color: #111;
+}
+
+.btn-equal {
+  background: #28a745;
+  color: #fff;
+  box-shadow: 0 0 15px #28a745;
+}
+.btn-equal:hover {
+  background: #34d058;
+}
+
+.btn-danger, .btn-warning {
+  font-weight: bold;
+}
